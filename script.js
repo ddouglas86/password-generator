@@ -33,6 +33,9 @@ function generatePassword() {
     alert("Please enter a value");
     generatePassword();
   }
+  else if (!userTotalChar) {
+    return;
+  }
   //verifies requested character types using Booleans
   else {
     var incUpperCase = confirm("Would you like to include Upper Case letters? \nOK for YES \nCancel for NO");
