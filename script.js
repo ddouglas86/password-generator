@@ -29,6 +29,10 @@ function generatePassword() {
     alert("Please enter numerical digits only");
     generatePassword();
   }
+  else if (userTotalChar === "") {
+    alert("Please enter a value");
+    generatePassword();
+  }
   //verifies requested character types using Booleans
   else {
     var incUpperCase = confirm("Would you like to include Upper Case letters? \nOK for YES \nCancel for NO");
@@ -60,9 +64,9 @@ function generatePassword() {
  reqCharcters = [...reqCharcters]
   for (var i = 0; i < userTotalChar; i++) {
     var random = Math.floor(Math.random() * holdArray.length); 
-    finalPass += holdArray.splice(random,1);
-    console.log(finalPass)
+    finalPass += holdArray.splice(random, 1);
   }
+ 
  return finalPass;
 }
 
